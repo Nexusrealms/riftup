@@ -19,7 +19,7 @@
 			"de.nexusrealms.riftup.Riftup"
 		],
 		"fabric-datagen": [
-			"de.nexusrealms.riftup.RiftupDataGenerator"
+          "de.nexusrealms.riftup.datagen.RiftupDataGenerator"
 		]
 	},
 	"mixins": [

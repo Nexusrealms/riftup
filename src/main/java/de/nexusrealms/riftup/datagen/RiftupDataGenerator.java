@@ -1,4 +1,4 @@
-package de.nexusrealms.riftup;
+package de.nexusrealms.riftup.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

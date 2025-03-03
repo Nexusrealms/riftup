@@ -12,7 +12,7 @@ import net.minecraft.registry.RegistryKey;
 
 public class ModItems {
     //TIN
-    public static final Item TIN_INGOT = create("steel_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
+    public static final Item TIN_INGOT = create("tin_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
     //BRONZE
     public static final Item BRONZE_INGOT = create("bronze_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
     //STEEL

@@ -1,5 +1,6 @@
 package de.nexusrealms.riftup;
 
+import de.nexusrealms.riftup.block.ModBlocks;
 import de.nexusrealms.riftup.item.ModArmorMaterials;
 import de.nexusrealms.riftup.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -26,6 +27,7 @@ public class Riftup implements ModInitializer {
 		// Proceed with mild caution.
 		ModArmorMaterials.init();
 		ModItems.init();
+		ModBlocks.init();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

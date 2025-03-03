@@ -1,0 +1,4 @@
+// 1.21.1	2025-03-03T09:40:10.974825	Riftup/Tags for minecraft:block
+16f0e7b2ee5c724e245f26117d89dd52864a423b data\minecraft\tags\block\needs_stone_tool.json
+aaee0ca110e4f3d3132ec72beddbe703250ac5ca data\minecraft\tags\block\mineable\pickaxe.json
+f0c06da2852e8194a3ff9bb64711c24768a82775 data\minecraft\tags\block\needs_iron_tool.json

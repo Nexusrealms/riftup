@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "riftup:block/bronze_block"
+    }
+  }
+}

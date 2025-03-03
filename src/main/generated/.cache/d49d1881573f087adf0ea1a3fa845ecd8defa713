@@ -1,0 +1,13 @@
+// 1.21.1	2025-03-03T09:40:10.9738253	Riftup/Model Definitions
+b97a5271e41cbe8dc3f4054f4744097d7f99984b assets\riftup\models\item\bronze_block.json
+870188eb7b3ae0594869f74f57436f77f408f77e assets\riftup\blockstates\tin_block.json
+3a9fe71d4d427577d924416629268ba882a4af93 assets\riftup\models\item\steel_block.json
+ca0c730173a0b75668d44cc9a10cafa2cf4a27d2 assets\riftup\models\item\steel_ingot.json
+01fbd1c2936acf71b2ea42798b72093695f361ca assets\riftup\blockstates\steel_block.json
+ee6f12f45d50ce8fb1bcb2b697a4e6cd831a68fe assets\riftup\models\item\bronze_ingot.json
+9d1afc02737bca338abbecada83ccc1ce67c5bad assets\riftup\models\item\tin_block.json
+1f8c5f2a1e5f55bcb38ba81bde70b70debdcc036 assets\riftup\blockstates\bronze_block.json
+0e0ba9d56dee4fc4fad9f6435507bcfbe9d78069 assets\riftup\models\block\bronze_block.json
+e8e53a9f7b8e7fccd53d2a1bd28054f92a13d4f3 assets\riftup\models\item\tin_ingot.json
+57aac2d98de128842b5ec5b8fc017090c4bba9b6 assets\riftup\models\block\tin_block.json
+ee7e2a9de836486354cc3c3c4356530e75a99417 assets\riftup\models\block\steel_block.json

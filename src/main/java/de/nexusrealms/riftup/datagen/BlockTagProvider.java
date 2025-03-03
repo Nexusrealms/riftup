@@ -1,5 +1,6 @@
 package de.nexusrealms.riftup.datagen;
 
+import de.nexusrealms.riftup.block.ModBlockTags;
 import de.nexusrealms.riftup.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -26,6 +27,11 @@ public class BlockTagProvider extends FabricTagProvider<Block> {
                 .add(ModBlocks.BRONZE_BLOCK, ModBlocks.STEEL_BLOCK, ModBlocks.TIN_BLOCK);
     }
     private void configureToolLevelTags(RegistryWrapper.WrapperLookup wrapperLookup){
+        getOrCreateTagBuilder(ModBlockTags.INCORRECT_FOR_BRONZE_TOOL)
+                .addOptionalTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+        getOrCreateTagBuilder(ModBlockTags.INCORRECT_FOR_STEEL_TOOL)
+                .addOptionalTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.TIN_BLOCK, ModBlocks.BRONZE_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)

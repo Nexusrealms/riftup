@@ -24,7 +24,7 @@ public class BlockTagProvider extends FabricTagProvider<Block> {
     }
     private void configureMineableTags(RegistryWrapper.WrapperLookup wrapperLookup){
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.BRONZE_BLOCK, ModBlocks.STEEL_BLOCK, ModBlocks.TIN_BLOCK);
+                .add(ModBlocks.BRONZE_BLOCK, ModBlocks.STEEL_BLOCK, ModBlocks.TIN_BLOCK, ModBlocks.ALLOYMAKING_FURNACE);
     }
     private void configureToolLevelTags(RegistryWrapper.WrapperLookup wrapperLookup){
         getOrCreateTagBuilder(ModBlockTags.INCORRECT_FOR_BRONZE_TOOL)

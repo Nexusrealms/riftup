@@ -17,6 +17,8 @@ public class ModBlocks {
     public static final Block TIN_BLOCK = createWithItem("tin_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)), ItemGroups.BUILDING_BLOCKS);
     public static final Block BRONZE_BLOCK = createWithItem("bronze_block", new Block(AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)), ItemGroups.BUILDING_BLOCKS);
     public static final Block STEEL_BLOCK = createWithItem("steel_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)), ItemGroups.BUILDING_BLOCKS);
+    //TODO add this i dont have the time to do it in 30 mins
+    public static final Block ALLOYMAKING_FURNACE = createWithItem("alloymaking_furnace", new AlloymakingFurnaceBlock(AbstractBlock.Settings.copy(Blocks.FURNACE)), ItemGroups.FUNCTIONAL);
 
     public static <T extends Block> T createWithItem(String name, T block, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.BLOCK, Riftup.id(name), block);

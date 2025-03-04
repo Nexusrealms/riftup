@@ -1,14 +1,17 @@
 package de.nexusrealms.riftup.datagen;
 
 import de.nexusrealms.riftup.block.ModBlocks;
+import de.nexusrealms.riftup.item.ModItemTags;
 import de.nexusrealms.riftup.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -52,6 +55,14 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .input('#', ModItems.STEEL_INGOT)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALLOYMAKING_FURNACE, 1)
+                .pattern("#.#")
+                .pattern(". .")
+                .pattern("#.#")
+                .input('#', ItemTags.STONE_CRAFTING_MATERIALS)
+                .input('.', ModItemTags.CRAFTING_BRICK_BLOCKS)
+                .criterion("has_crafting_brick_block", FabricRecipeProvider.conditionsFromTag(ModItemTags.CRAFTING_BRICK_BLOCKS))
                 .offerTo(recipeExporter);
     }
 }

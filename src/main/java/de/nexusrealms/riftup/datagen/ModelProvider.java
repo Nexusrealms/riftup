@@ -8,7 +8,9 @@ import net.minecraft.block.CropBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import java.util.Optional;
 
@@ -22,9 +24,7 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRONZE_BLOCK);
-
     }
-
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BRONZE_INGOT, Models.GENERATED);

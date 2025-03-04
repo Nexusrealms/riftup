@@ -25,6 +25,7 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BRONZE_BLOCK, "Block of Bronze");
         translationBuilder.add(ModBlocks.TIN_BLOCK, "Block of Tin");
         translationBuilder.add(ModBlocks.STEEL_BLOCK, "Block of Steel");
+        translationBuilder.add(ModBlocks.ALLOYMAKING_FURNACE, "Alloymaking furnace");
 
 
     }

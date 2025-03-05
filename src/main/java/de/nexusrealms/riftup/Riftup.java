@@ -1,8 +1,11 @@
 package de.nexusrealms.riftup;
 
+import de.nexusrealms.riftup.block.ModBlockEntities;
 import de.nexusrealms.riftup.block.ModBlocks;
 import de.nexusrealms.riftup.item.ModArmorMaterials;
 import de.nexusrealms.riftup.item.ModItems;
+import de.nexusrealms.riftup.recipe.ModRecipes;
+import de.nexusrealms.riftup.screen.ModScreenHandlers;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -25,6 +28,9 @@ public class Riftup implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+		ModRecipes.init();
+		ModBlockEntities.init();
+		ModScreenHandlers.init();
 		ModArmorMaterials.init();
 		ModItems.init();
 		ModBlocks.init();

@@ -17,7 +17,7 @@ public class ModItems {
     public static final Item BRONZE_INGOT = create("bronze_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
     //STEEL
     public static final Item STEEL_INGOT = create("steel_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
-
+    public static final Item JUNK_INGOT = create("junk_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
 
     public static <T extends Item> T create(String name, T item, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.ITEM, Riftup.id(name), item);

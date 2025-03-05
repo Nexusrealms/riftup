@@ -18,6 +18,9 @@
 		"main": [
 			"de.nexusrealms.riftup.Riftup"
 		],
+		"client": [
+			"de.nexusrealms.riftup.client.RiftupClient"
+		],
 		"fabric-datagen": [
           "de.nexusrealms.riftup.datagen.RiftupDataGenerator"
 		]

@@ -1,6 +1,11 @@
 package de.nexusrealms.riftup.block;
 
 import com.mojang.serialization.Codec;
+import de.nexusrealms.riftup.item.ModItems;
+import de.nexusrealms.riftup.recipe.AlloymakingRecipe;
+import de.nexusrealms.riftup.recipe.ListRecipeInput;
+import de.nexusrealms.riftup.recipe.ModRecipes;
+import de.nexusrealms.riftup.screen.AlloymakingScreenHandler;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.Block;
@@ -17,10 +22,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
-import net.minecraft.recipe.RecipeEntry;
-import net.minecraft.recipe.RecipeInputProvider;
-import net.minecraft.recipe.RecipeMatcher;
-import net.minecraft.recipe.RecipeUnlocker;
+import net.minecraft.recipe.*;
 import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.RegistryWrapper;
@@ -43,11 +45,7 @@ import static net.minecraft.block.entity.AbstractFurnaceBlockEntity.canUseAsFuel
 
 public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity implements SidedInventory, RecipeUnlocker, RecipeInputProvider {
     public static final Codec<List<ItemStack>> MUTABLE_ITEM_STACK_LIST = ItemStack.CODEC.listOf().xmap(ArrayList::new, Function.identity());
-    protected static final int INPUT_SLOT_INDEX = 0;
-    protected static final int FUEL_SLOT_INDEX = 1;
-    protected static final int OUTPUT_SLOT_INDEX = 2;
-    public static final int BURN_TIME_PROPERTY_INDEX = 0;
-    public static final int FILL_PROPERTY_INDEX = 1;
+
     protected DefaultedList<ItemStack> inventory;
     protected List<ItemStack> moltenStacks = new ArrayList<>();
 
@@ -57,9 +55,12 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
     int burnTime;
     protected final PropertyDelegate propertyDelegate;
     private final Object2IntOpenHashMap<Identifier> recipesUsed;
-
-    protected AlloymakingFurnaceBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState) {
-        super(blockEntityType, blockPos, blockState);
+    private final RecipeManager.MatchGetter<ListRecipeInput, AlloymakingRecipe> matchGetter;
+    public static boolean isMeltable(ItemStack stack){
+        return true;
+    }
+    protected AlloymakingFurnaceBlockEntity(BlockPos blockPos, BlockState blockState) {
+        super(ModBlockEntities.ALLOYMAKING_FURNACE, blockPos, blockState);
         this.inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
@@ -91,6 +92,7 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
             }
         };
         this.recipesUsed = new Object2IntOpenHashMap<>();
+        this.matchGetter = RecipeManager.createCachedMatchGetter(ModRecipes.ALLOYMAKING_RECIPE_TYPE);
 
     }
 
@@ -115,7 +117,7 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
 
     @Override
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return null;
+        return new AlloymakingScreenHandler(syncId, playerInventory, this, propertyDelegate);
     }
 
     private boolean isBurning() {
@@ -200,14 +202,13 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, AlloymakingFurnaceBlockEntity blockEntity) {
+        boolean wasBurning = blockEntity.isBurning();
+        boolean isDirty = false;
         if (blockEntity.isBurning()) {
             --blockEntity.burnTime;
         }
-
         ItemStack fuel = blockEntity.inventory.get(1);
         ItemStack input = blockEntity.inventory.get(0);
-        boolean bl3 = !input.isEmpty();
-        boolean bl4 = !fuel.isEmpty();
         if (!fuel.isEmpty()) {
             blockEntity.burnTime += blockEntity.getFuelTime(fuel);
             Item item = fuel.getItem();
@@ -222,18 +223,45 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
             ItemStack toMelt = input.split(1);
             blockEntity.moltenStacks.add(toMelt);
         }
+        state = state.with(AlloymakingFurnaceBlock.LIT, blockEntity.isBurning());
         if(!blockEntity.isBurning()){
-
+            RecipeEntry<AlloymakingRecipe> recipeEntry = blockEntity.matchGetter.getFirstMatch(new ListRecipeInput(blockEntity.moltenStacks), world).orElse(null);
+            if(recipeEntry == null){
+                if(!blockEntity.moltenStacks.isEmpty()){
+                    Item item = blockEntity.moltenStacks.getFirst().getItem();
+                    if(blockEntity.moltenStacks.stream().allMatch(stack -> stack.isOf(item))){
+                        ItemStack stack = new ItemStack(item, blockEntity.moltenStacks.size());
+                        blockEntity.inventory.set(2, stack);
+                        blockEntity.moltenStacks.clear();
+                    } else {
+                        ItemStack stack = new ItemStack(ModItems.JUNK_INGOT, blockEntity.moltenStacks.size());
+                        blockEntity.inventory.set(2, stack);
+                        blockEntity.moltenStacks.clear();
+                    }
+                    isDirty = true;
+                }
+            } else {
+                int maxCount = blockEntity.getMaxCountPerStack();
+                if(canAcceptRecipeOutput(world.getRegistryManager(), recipeEntry, blockEntity.inventory, maxCount)){
+                    if (craftRecipe(world.getRegistryManager(), recipeEntry, blockEntity.inventory, maxCount, blockEntity.moltenStacks)) {
+                        blockEntity.setLastRecipe(recipeEntry);
+                    }
+                    isDirty = true;
+                }
+            }
+        }
+        if(wasBurning != blockEntity.isBurning() || isDirty){
+            markDirty(world, pos, state);
         }
     }
 
     private static boolean canAcceptRecipeOutput(DynamicRegistryManager registryManager, @Nullable RecipeEntry<?> recipe, DefaultedList<ItemStack> slots, int count) {
-        if (!((ItemStack)slots.get(0)).isEmpty() && recipe != null) {
+        if (recipe != null) {
             ItemStack itemStack = recipe.value().getResult(registryManager);
             if (itemStack.isEmpty()) {
                 return false;
             } else {
-                ItemStack itemStack2 = (ItemStack)slots.get(2);
+                ItemStack itemStack2 = slots.get(2);
                 if (itemStack2.isEmpty()) {
                     return true;
                 } else if (!ItemStack.areItemsAndComponentsEqual(itemStack2, itemStack)) {
@@ -249,22 +277,16 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
         }
     }
 
-    private static boolean craftRecipe(DynamicRegistryManager registryManager, @Nullable RecipeEntry<?> recipe, DefaultedList<ItemStack> slots, int count) {
-        if (recipe != null && canAcceptRecipeOutput(registryManager, recipe, slots, count)) {
-            ItemStack itemStack = (ItemStack)slots.get(0);
+    private static boolean craftRecipe(DynamicRegistryManager registryManager, @Nullable RecipeEntry<AlloymakingRecipe> recipe, DefaultedList<ItemStack> slots, int count, List<ItemStack> moltens) {
+        if (canAcceptRecipeOutput(registryManager, recipe, slots, count)) {
             ItemStack itemStack2 = recipe.value().getResult(registryManager);
-            ItemStack itemStack3 = (ItemStack)slots.get(2);
+            ItemStack itemStack3 = slots.get(2);
             if (itemStack3.isEmpty()) {
                 slots.set(2, itemStack2.copy());
             } else if (ItemStack.areItemsAndComponentsEqual(itemStack3, itemStack2)) {
                 itemStack3.increment(1);
             }
-
-            if (itemStack.isOf(Blocks.WET_SPONGE.asItem()) && !((ItemStack)slots.get(1)).isEmpty() && ((ItemStack)slots.get(1)).isOf(Items.BUCKET)) {
-                slots.set(1, new ItemStack(Items.WATER_BUCKET));
-            }
-
-            itemStack.decrement(1);
+            recipe.value().ingredients().forEach(ingredient -> AlloymakingRecipe.removeOneIf(moltens, ingredient));
             return true;
         } else {
             return false;

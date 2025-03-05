@@ -1,8 +1,10 @@
 package de.nexusrealms.riftup.datagen;
 
+import de.nexusrealms.riftup.item.ModItemTags;
 import de.nexusrealms.riftup.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,6 +21,7 @@ public class ItemTagProvider extends FabricTagProvider<Item> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
+        getOrCreateTagBuilder(ModItemTags.CRAFTING_BRICK_BLOCKS)
+                .add(Blocks.MUD_BRICKS.asItem(), Blocks.BRICKS.asItem());
     }
 }

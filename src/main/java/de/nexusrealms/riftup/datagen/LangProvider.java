@@ -34,6 +34,8 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TIN_INGOT, "Tin Ingot");
         translationBuilder.add(ModItems.STEEL_INGOT, "Steel Ingot");
 
+        translationBuilder.add("tag.item.riftup.crafting_brick_blocks", "Brick blocks");
+
     }
     private void generateMessageTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
 

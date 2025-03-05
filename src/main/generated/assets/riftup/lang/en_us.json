@@ -5,5 +5,6 @@
   "block.riftup.tin_block": "Block of Tin",
   "item.riftup.bronze_ingot": "Bronze Ingot",
   "item.riftup.steel_ingot": "Steel Ingot",
-  "item.riftup.tin_ingot": "Tin Ingot"
+  "item.riftup.tin_ingot": "Tin Ingot",
+  "tag.item.riftup.crafting_brick_blocks": "Brick blocks"
 }

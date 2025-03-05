@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 public class AlloymakingScreen extends HandledScreen<AlloymakingScreenHandler> {
-    private final Identifier background = Riftup.id("container/alloymaking/background");
+    private final Identifier background = Riftup.id("textures/gui/container/alloymaking_furnace.png");
     private final Identifier meltTexture = Riftup.id("container/alloymaking/melt");
     private final Identifier burnProgressTexture = Riftup.id("container/alloymaking/burn");;
     public AlloymakingScreen(AlloymakingScreenHandler handler, PlayerInventory inventory, Text title) {

@@ -2,7 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "riftup:item/cloth_boots",
-    "layer1": "riftup:item/cloth_boots_overlay",
-    "layer2": "minecraft:trims/items/boots_trim_redstone"
+    "layer1": "minecraft:trims/items/boots_trim_redstone"
   }
 }

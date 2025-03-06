@@ -63,7 +63,6 @@
     }
   ],
   "textures": {
-    "layer0": "riftup:item/cloth_boots",
-    "layer1": "riftup:item/cloth_boots_overlay"
+    "layer0": "riftup:item/cloth_boots"
   }
 }

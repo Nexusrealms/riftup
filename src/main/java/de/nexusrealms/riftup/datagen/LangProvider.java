@@ -33,6 +33,10 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BRONZE_INGOT, "Bronze Ingot");
         translationBuilder.add(ModItems.TIN_INGOT, "Tin Ingot");
         translationBuilder.add(ModItems.STEEL_INGOT, "Steel Ingot");
+        translationBuilder.add(ModItems.CLOTH_HELMET, "Cloth cap");
+        translationBuilder.add(ModItems.CLOTH_CHESTPLATE, "Cloth tunic");
+        translationBuilder.add(ModItems.CLOTH_LEGGINGS, "Cloth pants");
+        translationBuilder.add(ModItems.CLOTH_BOOTS, "Cloth shoes");
 
         translationBuilder.add("tag.item.riftup.crafting_brick_blocks", "Brick blocks");
 

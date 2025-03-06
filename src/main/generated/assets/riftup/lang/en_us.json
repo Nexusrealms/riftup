@@ -5,6 +5,10 @@
   "block.riftup.tin_block": "Block of Tin",
   "container.riftup.alloymaking_furnace": "Alloy-making furnace",
   "item.riftup.bronze_ingot": "Bronze Ingot",
+  "item.riftup.cloth_boots": "Cloth shoes",
+  "item.riftup.cloth_chestplate": "Cloth tunic",
+  "item.riftup.cloth_helmet": "Cloth cap",
+  "item.riftup.cloth_leggings": "Cloth pants",
   "item.riftup.steel_ingot": "Steel Ingot",
   "item.riftup.tin_ingot": "Tin Ingot",
   "tag.item.riftup.crafting_brick_blocks": "Brick blocks"

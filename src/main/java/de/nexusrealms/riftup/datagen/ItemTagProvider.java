@@ -23,5 +23,7 @@ public class ItemTagProvider extends FabricTagProvider<Item> {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModItemTags.CRAFTING_BRICK_BLOCKS)
                 .add(Blocks.MUD_BRICKS.asItem(), Blocks.BRICKS.asItem());
+        getOrCreateTagBuilder(ItemTags.DYEABLE)
+                .add(ModItems.CLOTH_HELMET, ModItems.CLOTH_CHESTPLATE, ModItems.CLOTH_LEGGINGS, ModItems.CLOTH_BOOTS);
     }
 }

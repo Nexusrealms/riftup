@@ -1,24 +1,18 @@
 package de.nexusrealms.riftup.item;
 
-import com.google.common.base.Suppliers;
 import de.nexusrealms.riftup.Riftup;
-import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 import java.util.EnumMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
@@ -30,7 +24,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.BODY, 2);
     }), 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
             () -> Ingredient.fromTag(ItemTags.WOOL),
-            List.of(new ArmorMaterial.Layer(Identifier.ofVanilla("cloth"), "", true)));
+            List.of(new ArmorMaterial.Layer(Riftup.id("cloth"), "", true)));
     public static final RegistryEntry<ArmorMaterial> BRONZE = create("bronze", Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 1);
         map.put(ArmorItem.Type.LEGGINGS, 3);

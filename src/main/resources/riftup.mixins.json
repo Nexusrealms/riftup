@@ -3,7 +3,7 @@
 	"package": "de.nexusrealms.riftup.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+      "ItemModelGeneratorMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

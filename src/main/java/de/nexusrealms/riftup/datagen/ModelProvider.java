@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.CropBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.entity.EntityType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -31,5 +32,10 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.JUNK_INGOT, Models.GENERATED);
+        itemModelGenerator.registerArmor(ModItems.CLOTH_HELMET);
+        itemModelGenerator.registerArmor(ModItems.CLOTH_CHESTPLATE);
+        itemModelGenerator.registerArmor(ModItems.CLOTH_LEGGINGS);
+        itemModelGenerator.registerArmor(ModItems.CLOTH_BOOTS);
+
     }
 }

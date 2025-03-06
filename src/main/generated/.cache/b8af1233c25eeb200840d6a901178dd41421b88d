@@ -1,10 +1,12 @@
-// 1.21.1	2025-03-05T21:24:24.4522361	Riftup/Recipes
+// 1.21.1	2025-03-06T16:06:17.8166969	Riftup/Recipes
 dedda5563f5d973468d9bfb7ff876dd3d8eaf9c1 data\riftup\advancement\recipes\building_blocks\bronze_block.json
 0cbec9673afc5ae8413546a7806c05efb6b10fa8 data\riftup\advancement\recipes\misc\steel_ingot.json
+0cd5fc16c4c3b20a2c07b9da1dcef5852a980f03 data\riftup\recipe\alloymaking_bronze_ingot.json
 4c385c38349be89b2c1331cf30d0b7694bdae1a3 data\riftup\recipe\steel_ingot.json
 121f7f2503bdcf555c14391b4640156debafa2fb data\riftup\advancement\recipes\building_blocks\tin_block.json
 8832815c3af98eff32bddb18b613e99c5c9f2587 data\riftup\recipe\tin_block.json
 42547d3fdc474422327443911a44b303fa2d6c38 data\riftup\recipe\bronze_block.json
+3e28a29d2574f8159dc111738cbaeb0a4d9056a4 data\riftup\advancement\recipes\alloymaking\alloymaking_bronze_ingot.json
 8cebc5a651cf90bb49b6a9752484c18d3a65e28c data\riftup\advancement\recipes\misc\bronze_ingot.json
 c94a57966325d5b4bd91919e09d4dfa85eb92b5e data\riftup\advancement\recipes\misc\tin_ingot.json
 46c9081fc6838d3174060318dc832e14c00708de data\riftup\advancement\recipes\building_blocks\alloymaking_furnace.json

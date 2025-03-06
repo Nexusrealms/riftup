@@ -16,7 +16,7 @@ import net.minecraft.util.math.MathHelper;
 public class AlloymakingScreen extends HandledScreen<AlloymakingScreenHandler> {
     private final Identifier background = Riftup.id("textures/gui/container/alloymaking_furnace.png");
     private final Identifier meltTexture = Riftup.id("container/alloymaking/melt");
-    private final Identifier burnProgressTexture = Riftup.id("container/alloymaking/burn");;
+    private final Identifier burnProgressTexture = Riftup.id("container/alloymaking/burn");
     public AlloymakingScreen(AlloymakingScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
@@ -34,7 +34,11 @@ public class AlloymakingScreen extends HandledScreen<AlloymakingScreenHandler> {
         int j = this.y;
         context.drawTexture(this.background, i, j, 0, 0, this.backgroundWidth, this.backgroundHeight);
         if ((this.handler).isBurning()) {
-            context.drawGuiTexture(this.burnProgressTexture, 14, 14, 0, 0, i + 56, j + 36, 14, 14);
+            int l = MathHelper.ceil(handler.getFuelProgress() * 13.0F) + 1;
+            context.drawGuiTexture(this.burnProgressTexture, 14, 14, 0, 14 - l, i + 35, j + 36 + 14 - l, 14, l);
+        }
+        if(handler.hasMelt()){
+            context.drawGuiTexture(meltTexture, 42, 42, 0, 0, i +66, j +22, 42, 42);
         }
     }
 }

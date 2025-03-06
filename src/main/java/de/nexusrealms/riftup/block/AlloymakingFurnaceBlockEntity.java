@@ -7,12 +7,8 @@ import de.nexusrealms.riftup.recipe.ListRecipeInput;
 import de.nexusrealms.riftup.recipe.ModRecipes;
 import de.nexusrealms.riftup.screen.AlloymakingScreenHandler;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import net.minecraft.block.AbstractFurnaceBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.LockableContainerBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -23,7 +19,6 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.recipe.*;
-import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -33,7 +28,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -53,6 +47,7 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
     private static final int[] BOTTOM_SLOTS = new int[]{2, 1};
     private static final int[] SIDE_SLOTS = new int[]{1};
     int burnTime;
+    int fuelTime;
     protected final PropertyDelegate propertyDelegate;
     private final Object2IntOpenHashMap<Identifier> recipesUsed;
     private final RecipeManager.MatchGetter<ListRecipeInput, AlloymakingRecipe> matchGetter;
@@ -71,6 +66,9 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
                     case 1 -> {
                         return hasMoltenStacks() ? 1 : 0;
                     }
+                    case 2 -> {
+                        return fuelTime;
+                    }
                     default -> {
                         return 0;
                     }
@@ -80,15 +78,13 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
             public void set(int index, int value) {
                 switch (index) {
                     case 0 -> burnTime = value;
-                    case 1 -> {
-
-                    }
+                    case  2 -> fuelTime = value;
                 }
 
             }
 
             public int size() {
-                return 2;
+                return 3;
             }
         };
         this.recipesUsed = new Object2IntOpenHashMap<>();
@@ -130,6 +126,7 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
         Inventories.readNbt(nbt, this.inventory, registryLookup);
         this.moltenStacks = MUTABLE_ITEM_STACK_LIST.parse(registryLookup.getOps(NbtOps.INSTANCE), nbt.get("MoltenStacks")).getOrThrow();
         this.burnTime = nbt.getShort("BurnTime");
+        this.fuelTime = nbt.getShort("FuelTime");
         NbtCompound nbtCompound = nbt.getCompound("RecipesUsed");
         nbtCompound.getKeys().forEach(s -> recipesUsed.put(Identifier.of(s), nbtCompound.getInt(s)));
     }
@@ -137,6 +134,7 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         nbt.putShort("BurnTime", (short) this.burnTime);
+        nbt.putShort("FuelTime", (short) this.fuelTime);
         Inventories.writeNbt(nbt, this.inventory, registryLookup);
         nbt.put("MoltenStacks", MUTABLE_ITEM_STACK_LIST.encodeStart(registryLookup.getOps(NbtOps.INSTANCE), moltenStacks).getOrThrow());
         NbtCompound nbtCompound = new NbtCompound();
@@ -209,8 +207,9 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
         }
         ItemStack fuel = blockEntity.inventory.get(1);
         ItemStack input = blockEntity.inventory.get(0);
-        if (!fuel.isEmpty()) {
+        if (!fuel.isEmpty() && !blockEntity.isBurning()) {
             blockEntity.burnTime += blockEntity.getFuelTime(fuel);
+            blockEntity.fuelTime = blockEntity.burnTime;
             Item item = fuel.getItem();
             fuel.decrement(1);
             if (fuel.isEmpty()) {
@@ -250,7 +249,11 @@ public class AlloymakingFurnaceBlockEntity extends LockableContainerBlockEntity 
                 }
             }
         }
-        if(wasBurning != blockEntity.isBurning() || isDirty){
+        if(wasBurning != blockEntity.isBurning()){
+            world.setBlockState(pos, state, 3);
+            isDirty = true;
+        }
+        if(isDirty){
             markDirty(world, pos, state);
         }
     }

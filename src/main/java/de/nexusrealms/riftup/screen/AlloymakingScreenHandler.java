@@ -17,6 +17,7 @@ import net.minecraft.screen.*;
 import net.minecraft.screen.slot.FurnaceFuelSlot;
 import net.minecraft.screen.slot.FurnaceOutputSlot;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class AlloymakingScreenHandler extends ScreenHandler {
@@ -24,16 +25,16 @@ public class AlloymakingScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
     protected final World world;
     public AlloymakingScreenHandler(int syncId, PlayerInventory playerInventory){
-        this(syncId, playerInventory, new SimpleInventory(3), new ArrayPropertyDelegate(2));
+        this(syncId, playerInventory, new SimpleInventory(3), new ArrayPropertyDelegate(3));
     }
     public AlloymakingScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
         super(ModScreenHandlers.ALLOYMAKING, syncId);
         this.world = playerInventory.player.getWorld();
         this.inventory = inventory;
         this.propertyDelegate = propertyDelegate;
-        this.addSlot(new Slot(inventory, 0, 56, 17));
-        this.addSlot(new AlloymakingFuelSlot(inventory, 1, 56, 53));
-        this.addSlot(new FurnaceOutputSlot(playerInventory.player, inventory, 2, 116, 35));
+        this.addSlot(new Slot(inventory, 0, 35, 17));
+        this.addSlot(new AlloymakingFuelSlot(inventory, 1, 35, 53));
+        this.addSlot(new FurnaceOutputSlot(playerInventory.player, inventory, 2, 125, 35));
         int i;
         for(i = 0; i < 3; ++i) {
             for(int j = 0; j < 9; ++j) {
@@ -50,7 +51,17 @@ public class AlloymakingScreenHandler extends ScreenHandler {
     public boolean isBurning(){
         return propertyDelegate.get(0) > 0;
     }
+    public boolean hasMelt(){
+        return propertyDelegate.get(1) > 0;
+    }
+    public float getFuelProgress() {
+        int i = this.propertyDelegate.get(2);
+        if (i == 0) {
+            i = 200;
+        }
 
+        return MathHelper.clamp((float)this.propertyDelegate.get(0) / (float)i, 0.0F, 1.0F);
+    }
     @Override
     public ItemStack quickMove(PlayerEntity player, int slot) {
         ItemStack itemStack = ItemStack.EMPTY;

@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-06T18:43:41.0526478	Riftup/Model Definitions
+// 1.21.1	2025-03-07T15:06:37.0706921	Riftup/Model Definitions
 b97a5271e41cbe8dc3f4054f4744097d7f99984b assets\riftup\models\item\bronze_block.json
 4b3dd01fe56d8d70171e508aec2694c3b0d79593 assets\riftup\models\item\cloth_boots_gold_trim.json
 163479c16711534be2b2deb03ee7de3d4d9468cc assets\riftup\models\item\cloth_leggings_diamond_trim.json
@@ -7,8 +7,8 @@ ca0c730173a0b75668d44cc9a10cafa2cf4a27d2 assets\riftup\models\item\steel_ingot.j
 d8bdfb983e60a9bb8bb0f4e81ad6018f9f703b10 assets\riftup\models\item\cloth_helmet_iron_trim.json
 01fbd1c2936acf71b2ea42798b72093695f361ca assets\riftup\blockstates\steel_block.json
 20c054e6d13e29b20b15c607dab1ba54191eee40 assets\riftup\models\item\cloth_helmet.json
-9d1afc02737bca338abbecada83ccc1ce67c5bad assets\riftup\models\item\tin_block.json
 1f8c5f2a1e5f55bcb38ba81bde70b70debdcc036 assets\riftup\blockstates\bronze_block.json
+9d1afc02737bca338abbecada83ccc1ce67c5bad assets\riftup\models\item\tin_block.json
 bd6512e595a8739d34e866c287b70e884b3a4f7c assets\riftup\models\item\cloth_helmet_netherite_trim.json
 a14d647018c466aacb26f65980d8151855f593fe assets\riftup\models\item\cloth_helmet_copper_trim.json
 e8e53a9f7b8e7fccd53d2a1bd28054f92a13d4f3 assets\riftup\models\item\tin_ingot.json

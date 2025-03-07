@@ -28,6 +28,7 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ALLOYMAKING_FURNACE, "Alloy-making furnace");
 
         translationBuilder.add("container.riftup.alloymaking_furnace", "Alloy-making furnace");
+        translationBuilder.add( "emi.category.riftup.alloymaking", "Alloymaking");
     }
     private void generateItemTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
         translationBuilder.add(ModItems.BRONZE_INGOT, "Bronze Ingot");
@@ -42,6 +43,5 @@ public class LangProvider extends FabricLanguageProvider {
 
     }
     private void generateMessageTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
-
     }
 }

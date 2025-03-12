@@ -9,6 +9,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 import java.util.EnumMap;
@@ -24,7 +25,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.BODY, 2);
     }), 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
             () -> Ingredient.fromTag(ItemTags.WOOL),
-            List.of(new ArmorMaterial.Layer(Riftup.id("cloth"), "", true)));
+            List.of(new ArmorMaterial.Layer(Riftup.id("cloth"), "", true), new ArmorMaterial.Layer(Riftup.id("cloth"), "_overlay", false)));
     public static final RegistryEntry<ArmorMaterial> BRONZE = create("bronze", Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 1);
         map.put(ArmorItem.Type.LEGGINGS, 3);

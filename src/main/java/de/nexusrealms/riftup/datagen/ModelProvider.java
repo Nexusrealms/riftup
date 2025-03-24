@@ -23,15 +23,10 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRONZE_BLOCK);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.BRONZE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.JUNK_INGOT, Models.GENERATED);
         itemModelGenerator.registerArmor(ModItems.CLOTH_HELMET);
         itemModelGenerator.registerArmor(ModItems.CLOTH_CHESTPLATE);
         itemModelGenerator.registerArmor(ModItems.CLOTH_LEGGINGS);

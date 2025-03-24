@@ -15,8 +15,6 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    BRONZE(ModBlockTags.INCORRECT_FOR_BRONZE_TOOL, 200, 5.0F, 1.5F, 12,
-            () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
     STEEL(ModBlockTags.INCORRECT_FOR_STEEL_TOOL, 600, 7.0F, 2.5F, 6,
             () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
     private final TagKey<Block> inverseTag;

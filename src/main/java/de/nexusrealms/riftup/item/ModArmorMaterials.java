@@ -26,14 +26,6 @@ public class ModArmorMaterials {
     }), 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
             () -> Ingredient.fromTag(ItemTags.WOOL),
             List.of(new ArmorMaterial.Layer(Riftup.id("cloth"), "", true), new ArmorMaterial.Layer(Riftup.id("cloth"), "_overlay", false)));
-    public static final RegistryEntry<ArmorMaterial> BRONZE = create("bronze", Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
-        map.put(ArmorItem.Type.BOOTS, 1);
-        map.put(ArmorItem.Type.LEGGINGS, 3);
-        map.put(ArmorItem.Type.CHESTPLATE, 4);
-        map.put(ArmorItem.Type.HELMET, 2);
-        map.put(ArmorItem.Type.BODY, 4);
-    }), 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F,
-            () -> Ingredient.ofItems(ModItems.BRONZE_INGOT));
     public static final RegistryEntry<ArmorMaterial> STEEL = create("steel", Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);

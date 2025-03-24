@@ -9,12 +9,8 @@ import net.minecraft.registry.RegistryKey;
 
 public class ModItems {
     //TIN
-    public static final Item TIN_INGOT = create("tin_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
-    //BRONZE
-    public static final Item BRONZE_INGOT = create("bronze_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
-    //STEEL
+
     public static final Item STEEL_INGOT = create("steel_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
-    public static final Item JUNK_INGOT = create("junk_ingot", new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
     //CLOTH ARMOR
     public static final ArmorItem CLOTH_HELMET = create("cloth_helmet", new ArmorItem(ModArmorMaterials.CLOTH, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(4))), ItemGroups.COMBAT);
     public static final ArmorItem CLOTH_CHESTPLATE = create("cloth_chestplate", new ArmorItem(ModArmorMaterials.CLOTH, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(4))), ItemGroups.COMBAT);

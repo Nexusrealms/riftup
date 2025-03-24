@@ -6,7 +6,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 
 public class ModBlockTags {
-    public static final TagKey<Block> INCORRECT_FOR_BRONZE_TOOL = create("incorrect_for_bronze_tool");
     public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = create("incorrect_for_steel_tool");
 
     private static TagKey<Block> create(String name){

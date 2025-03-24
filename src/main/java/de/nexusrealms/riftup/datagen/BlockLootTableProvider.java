@@ -14,9 +14,7 @@ public class BlockLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.BRONZE_BLOCK);
-        addDrop(ModBlocks.TIN_BLOCK);
+
         addDrop(ModBlocks.STEEL_BLOCK);
-        addDrop(ModBlocks.ALLOYMAKING_FURNACE);
     }
 }

@@ -23,17 +23,12 @@ public class BlockTagProvider extends FabricTagProvider<Block> {
         configureToolLevelTags(wrapperLookup);
     }
     private void configureMineableTags(RegistryWrapper.WrapperLookup wrapperLookup){
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.BRONZE_BLOCK, ModBlocks.STEEL_BLOCK, ModBlocks.TIN_BLOCK, ModBlocks.ALLOYMAKING_FURNACE);
+        //getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
     }
     private void configureToolLevelTags(RegistryWrapper.WrapperLookup wrapperLookup){
-        getOrCreateTagBuilder(ModBlockTags.INCORRECT_FOR_BRONZE_TOOL)
-                .addOptionalTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
         getOrCreateTagBuilder(ModBlockTags.INCORRECT_FOR_STEEL_TOOL)
                 .addOptionalTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.TIN_BLOCK, ModBlocks.BRONZE_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.STEEL_BLOCK);
     }

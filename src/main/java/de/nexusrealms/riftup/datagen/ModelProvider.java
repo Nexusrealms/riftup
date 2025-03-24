@@ -31,6 +31,9 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.CLOTH_CHESTPLATE);
         itemModelGenerator.registerArmor(ModItems.CLOTH_LEGGINGS);
         itemModelGenerator.registerArmor(ModItems.CLOTH_BOOTS);
-
+        itemModelGenerator.registerArmor(ModItems.STEEL_HELMET);
+        itemModelGenerator.registerArmor(ModItems.STEEL_CHESTPLATE);
+        itemModelGenerator.registerArmor(ModItems.STEEL_LEGGINGS);
+        itemModelGenerator.registerArmor(ModItems.STEEL_BOOTS);
     }
 }

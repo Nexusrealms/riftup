@@ -29,6 +29,10 @@ public class LangProvider extends FabricLanguageProvider {
     }
     private void generateItemTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
         translationBuilder.add(ModItems.STEEL_INGOT, "Steel Ingot");
+        translationBuilder.add(ModItems.STEEL_HELMET, "Steel helmet");
+        translationBuilder.add(ModItems.STEEL_CHESTPLATE, "Steel chestplate");
+        translationBuilder.add(ModItems.STEEL_LEGGINGS, "Steel leggings");
+        translationBuilder.add(ModItems.STEEL_BOOTS, "Steel boots");
         translationBuilder.add(ModItems.CLOTH_HELMET, "Cloth cap");
         translationBuilder.add(ModItems.CLOTH_CHESTPLATE, "Cloth tunic");
         translationBuilder.add(ModItems.CLOTH_LEGGINGS, "Cloth pants");

@@ -1,16 +1,14 @@
 {
-  "block.riftup.alloymaking_furnace": "Alloy-making furnace",
-  "block.riftup.bronze_block": "Block of Bronze",
   "block.riftup.steel_block": "Block of Steel",
-  "block.riftup.tin_block": "Block of Tin",
   "container.riftup.alloymaking_furnace": "Alloy-making furnace",
   "emi.category.riftup.alloymaking": "Alloymaking",
-  "item.riftup.bronze_ingot": "Bronze Ingot",
   "item.riftup.cloth_boots": "Cloth shoes",
   "item.riftup.cloth_chestplate": "Cloth tunic",
   "item.riftup.cloth_helmet": "Cloth cap",
   "item.riftup.cloth_leggings": "Cloth pants",
+  "item.riftup.steel_boots": "Steel boots",
+  "item.riftup.steel_chestplate": "Steel chestplate",
+  "item.riftup.steel_helmet": "Steel helmet",
   "item.riftup.steel_ingot": "Steel Ingot",
-  "item.riftup.tin_ingot": "Tin Ingot",
-  "tag.item.riftup.crafting_brick_blocks": "Brick blocks"
+  "item.riftup.steel_leggings": "Steel leggings"
 }

@@ -23,5 +23,9 @@ public class ItemTagProvider extends FabricTagProvider<Item> {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.DYEABLE)
                 .add(ModItems.CLOTH_HELMET, ModItems.CLOTH_CHESTPLATE, ModItems.CLOTH_LEGGINGS, ModItems.CLOTH_BOOTS);
+        getOrCreateTagBuilder(ModItemTags.NEED_COKE_TO_SMELT)
+                .add(ModItems.STEEL_INGOT);
+        getOrCreateTagBuilder(ModItemTags.COKE)
+                .add(ModItems.COKE);
     }
 }

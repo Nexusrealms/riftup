@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-24T15:01:32.9305979	Riftup/Model Definitions
+// 1.21.1	2025-03-25T16:52:44.0532641	Riftup/Model Definitions
 e616896f3d9478b7e731f39c53578e7ee0fbdc95 assets\riftup\models\item\steel_leggings_gold_trim.json
 3cdbe7206922f27a01fcaff1c1129bd75eb5ec5a assets\riftup\models\item\steel_chestplate_quartz_trim.json
 de248740244c2517662d56a57ff796cd15de44c4 assets\riftup\models\item\steel_leggings_copper_trim.json
@@ -8,8 +8,8 @@ de248740244c2517662d56a57ff796cd15de44c4 assets\riftup\models\item\steel_legging
 ca0c730173a0b75668d44cc9a10cafa2cf4a27d2 assets\riftup\models\item\steel_ingot.json
 0ffaffc31c64316d1768fcb43a8135627bbef0e4 assets\riftup\models\item\cloth_boots_netherite_trim.json
 d8bdfb983e60a9bb8bb0f4e81ad6018f9f703b10 assets\riftup\models\item\cloth_helmet_iron_trim.json
-20c054e6d13e29b20b15c607dab1ba54191eee40 assets\riftup\models\item\cloth_helmet.json
 01fbd1c2936acf71b2ea42798b72093695f361ca assets\riftup\blockstates\steel_block.json
+20c054e6d13e29b20b15c607dab1ba54191eee40 assets\riftup\models\item\cloth_helmet.json
 ccea538fd17f9fff55353c3652ca517dc6cee7aa assets\riftup\models\item\steel_helmet.json
 5c5efaab33093c5d54633574e57e69610adb7c52 assets\riftup\models\item\steel_boots_diamond_trim.json
 754b1305a92961c3fe4ee556a670b75f5bf5bdbd assets\riftup\models\item\steel_helmet_emerald_trim.json
@@ -35,8 +35,8 @@ d1e0d5a55c31e0ffd82875e4b25da4307342377b assets\riftup\models\item\cloth_boots_d
 c2009a21e562ae1ef47e8c2db1c2a8c0bd694a40 assets\riftup\models\item\steel_leggings_netherite_trim.json
 b0e1936cf80deb3d9d55617255e56b4d10d65ec8 assets\riftup\models\item\cloth_chestplate_gold_trim.json
 984c624bfdfee714f6e62573eb087c96ba3efc43 assets\riftup\models\item\steel_helmet_amethyst_trim.json
-ac6997cb9b11d65a4ce8d6d4c1ec657e2c4ac792 assets\riftup\models\item\cloth_boots_emerald_trim.json
 b9b251a839634c02f158b5b34908039c54783fd0 assets\riftup\models\item\cloth_boots_redstone_trim.json
+ac6997cb9b11d65a4ce8d6d4c1ec657e2c4ac792 assets\riftup\models\item\cloth_boots_emerald_trim.json
 4add6dac345c6c302805da0fc6aca8b5d5687afb assets\riftup\models\item\cloth_boots_quartz_trim.json
 495789830d8d3db60ccc40a27ed76dbdf04663fa assets\riftup\models\item\cloth_helmet_gold_trim.json
 49bdb3fdc2769b68f1d2252c96d930c6642b82c6 assets\riftup\models\item\steel_chestplate_iron_trim.json
@@ -46,8 +46,8 @@ f5e2d1806131464458ce5cb480e787a97b27ee77 assets\riftup\models\item\cloth_legging
 3796fd4ae12a58686ca2d7413ad8549b2d5946d9 assets\riftup\models\item\cloth_chestplate_emerald_trim.json
 f1a579a7d9922f90948c0601e495de8db30a21a2 assets\riftup\models\item\steel_helmet_copper_trim.json
 b12f600255e104628edab1abcf1c44d93dcebcfb assets\riftup\models\item\cloth_chestplate.json
-5b6c5f960828d4f5e3ed86cac5dd9a5bc5495bbc assets\riftup\models\item\steel_leggings_emerald_trim.json
 f1727150e4be58bd7af4efb45bec6f8ad74bc5ab assets\riftup\models\item\cloth_chestplate_amethyst_trim.json
+5b6c5f960828d4f5e3ed86cac5dd9a5bc5495bbc assets\riftup\models\item\steel_leggings_emerald_trim.json
 5dae57ccd367ace927aaccd6a7b42b9f8cee487e assets\riftup\models\item\steel_boots_gold_trim.json
 e8db283eeaeb095a5b3360522af0975f703d76db assets\riftup\models\item\cloth_chestplate_lapis_trim.json
 1ff54b60ad984c5afb74c63eb4b701646105e4e8 assets\riftup\models\item\steel_helmet_diamond_trim.json

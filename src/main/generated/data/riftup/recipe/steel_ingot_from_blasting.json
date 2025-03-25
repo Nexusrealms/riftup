@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 120,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "riftup:steel_ingot"
+  }
+}

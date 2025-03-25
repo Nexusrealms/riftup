@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-24T15:01:32.929601	Riftup/Recipes
+// 1.21.1	2025-03-25T16:52:44.0522377	Riftup/Recipes
 336e061d11f07c535ee050230bde08d7a8d7f51c data\riftup\advancement\recipes\combat\cloth_helmet.json
 f1d89592dca512ecdec9e05faba4adde20f5438d data\riftup\advancement\recipes\combat\steel_helmet.json
 e1aec60285c3fff28954663881be3a0b1ccc01c6 data\riftup\recipe\steel_chestplate.json
@@ -10,9 +10,11 @@ a1e629b006b37df89cbd409cb81122791368c526 data\riftup\recipe\cloth_chestplate.jso
 4c385c38349be89b2c1331cf30d0b7694bdae1a3 data\riftup\recipe\steel_ingot.json
 b4aeaaf93b5bf2f66f1ff157ac3b4adeef0d8f56 data\riftup\recipe\cloth_boots.json
 04936d155e4f917a6556f012e228a76db6a69d60 data\riftup\recipe\cloth_leggings.json
+6c20c756e9977f32319149ecf2f1672db722b50e data\riftup\recipe\steel_ingot_from_blasting.json
 a072d2ebe0f6bb9aaee9748a2abadf221923f8bc data\riftup\advancement\recipes\combat\cloth_boots.json
 272ec8edc35bba6fbf514f07dfe4c85b390054bf data\riftup\recipe\steel_helmet.json
 a03f83ecd49b0b33b2d19e8537671f43fd15e699 data\riftup\recipe\steel_boots.json
+8e1e5cc4b7198038af4c512106e870757fdbc232 data\riftup\advancement\recipes\misc\steel_ingot_from_blasting.json
 5c79b85caba75647084ea0d10ebd7caf1f111ead data\riftup\advancement\recipes\combat\steel_chestplate.json
 a7cc462fe7fa9c25ff1c721b6bf83bd17055bea3 data\riftup\advancement\recipes\combat\cloth_chestplate.json
 c5a13ce73f3fbf2324ba874afc1e3727670ce3d4 data\riftup\advancement\recipes\combat\steel_leggings.json

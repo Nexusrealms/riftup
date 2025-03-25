@@ -1,2 +1,4 @@
-// 1.21.1	2025-03-24T15:01:32.9325922	Riftup/Tags for minecraft:item
+// 1.21.1	2025-03-25T16:52:44.0562278	Riftup/Tags for minecraft:item
+05b8e15a765fb88dfe2b3ec40d80b76ded4058f7 data\riftup\tags\item\need_coke_to_smelt.json
 c94cc432095f6761012c82e29fba249deef6c893 data\minecraft\tags\item\dyeable.json
+0c5cdacb10403ff06c6682b3a024e2bc525bd966 data\riftup\tags\item\coke.json

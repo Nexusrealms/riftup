@@ -1,12 +1,18 @@
 package de.nexusrealms.riftup.datagen;
 
+import de.nexusrealms.riftup.Riftup;
 import de.nexusrealms.riftup.block.ModBlocks;
+import de.nexusrealms.riftup.item.ModItemTags;
 import de.nexusrealms.riftup.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
+import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -32,6 +38,8 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
                 .offerTo(recipeExporter);
         generateArmorRecipes(recipeExporter);
+        CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(Items.IRON_INGOT), RecipeCategory.MISC, ModItems.STEEL_INGOT, 1, 120)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COKE), FabricRecipeProvider.conditionsFromTag(ModItemTags.COKE)).offerTo(recipeExporter, Riftup.id("steel_ingot_from_blasting"));
     }
     private void generateArmorRecipes(RecipeExporter recipeExporter){
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_HELMET, 1)

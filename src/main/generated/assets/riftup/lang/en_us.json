@@ -10,5 +10,7 @@
   "item.riftup.steel_chestplate": "Steel chestplate",
   "item.riftup.steel_helmet": "Steel helmet",
   "item.riftup.steel_ingot": "Steel Ingot",
-  "item.riftup.steel_leggings": "Steel leggings"
+  "item.riftup.steel_leggings": "Steel leggings",
+  "tag.item.riftup.coke": "Coke",
+  "tag.item.riftup.need_coke_to_smelt": "Need coke to smelt"
 }

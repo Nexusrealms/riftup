@@ -1,12 +1,15 @@
 package de.nexusrealms.riftup.datagen;
 
 import de.nexusrealms.riftup.block.ModBlocks;
+import de.nexusrealms.riftup.item.ModItemTags;
 import de.nexusrealms.riftup.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.entity.EntityType;
+import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -38,7 +41,11 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.CLOTH_LEGGINGS, "Cloth pants");
         translationBuilder.add(ModItems.CLOTH_BOOTS, "Cloth shoes");
 
-
+        translateTag(translationBuilder, ModItemTags.COKE, "Coke");
+        translateTag(translationBuilder, ModItemTags.NEED_COKE_TO_SMELT, "Need coke to smelt");
+    }
+    private void translateTag(TranslationBuilder translationBuilder, TagKey<Item> tagKey, String name){
+        translationBuilder.add(tagKey.getTranslationKey(), name);
     }
     private void generateMessageTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
     }

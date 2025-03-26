@@ -6,6 +6,7 @@ import de.nexusrealms.riftup.item.ModArmorMaterials;
 import de.nexusrealms.riftup.item.ModItems;
 import de.nexusrealms.riftup.recipe.ModRecipes;
 import de.nexusrealms.riftup.screen.ModScreenHandlers;
+import de.nexusrealms.riftup.world.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -34,6 +35,7 @@ public class Riftup implements ModInitializer {
 		ModArmorMaterials.init();
 		ModItems.init();
 		ModBlocks.init();
+		ModWorldGen.register();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

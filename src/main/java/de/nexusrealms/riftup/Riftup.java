@@ -35,7 +35,7 @@ public class Riftup implements ModInitializer {
 		ModArmorMaterials.init();
 		ModItems.init();
 		ModBlocks.init();
-		ModWorldGen.register();
+		ModWorldGen.init();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

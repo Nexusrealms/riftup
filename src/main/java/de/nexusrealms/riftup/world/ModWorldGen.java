@@ -14,7 +14,7 @@ public class ModWorldGen {
             Riftup.id("nether_ceiling_diamond_ore")
     );
 
-    public static void register() {
+    public static void init() {
         // Remove vanilla diamond generation
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInTheNether(),

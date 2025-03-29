@@ -12,11 +12,11 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
     public static final Block STEEL_BLOCK = createWithItem("steel_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)), ItemGroups.BUILDING_BLOCKS);
-    //TODO add this i dont have the time to do it in 30 mins
-
+    public static final Block NETHER_DIAMOND_ORE = createWithItem("nether_diamond_ore", new Block(AbstractBlock.Settings.copy(Blocks.GILDED_BLACKSTONE).sounds(BlockSoundGroup.NETHER_GOLD_ORE)), ItemGroups.NATURAL);
     public static <T extends Block> T createWithItem(String name, T block, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.BLOCK, Riftup.id(name), block);
         Registry.register(Registries.ITEM, Riftup.id(name), new BlockItem(block, new Item.Settings()));

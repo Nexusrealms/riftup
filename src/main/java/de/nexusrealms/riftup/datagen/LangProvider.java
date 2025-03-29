@@ -26,6 +26,7 @@ public class LangProvider extends FabricLanguageProvider {
     }
     private void generateBlockTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
         translationBuilder.add(ModBlocks.STEEL_BLOCK, "Block of Steel");
+        translationBuilder.add(ModBlocks.NETHER_DIAMOND_ORE, "Nether Diamond Ore");
 
         translationBuilder.add("container.riftup.alloymaking_furnace", "Alloy-making furnace");
         translationBuilder.add( "emi.category.riftup.alloymaking", "Alloymaking");

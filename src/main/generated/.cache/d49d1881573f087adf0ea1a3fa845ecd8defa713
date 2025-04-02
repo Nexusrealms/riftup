@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-29T20:12:29.1892489	Riftup/Model Definitions
+// 1.21.1	2025-04-02T16:45:03.376133	Riftup/Model Definitions
 e616896f3d9478b7e731f39c53578e7ee0fbdc95 assets\riftup\models\item\steel_leggings_gold_trim.json
 3cdbe7206922f27a01fcaff1c1129bd75eb5ec5a assets\riftup\models\item\steel_chestplate_quartz_trim.json
 de248740244c2517662d56a57ff796cd15de44c4 assets\riftup\models\item\steel_leggings_copper_trim.json
@@ -74,13 +74,13 @@ f316896cfdcd88fea0bab08ecbd8b55d21e1bf98 assets\riftup\models\item\cloth_chestpl
 f48afe81ee25389ccb5257718a07b9d2b6881792 assets\riftup\models\item\steel_chestplate_redstone_trim.json
 99cc49bb0b48b6dc292b6878c3d9dcf80acb5a02 assets\riftup\models\item\steel_chestplate_gold_trim.json
 edd536b658b20184dfb1da7ef06eb26fd2ecc22d assets\riftup\models\item\cloth_helmet_amethyst_trim.json
-8a1c43920a5e5ee578f1273bf9190df1c751ffe5 assets\riftup\models\item\steel_helmet_quartz_trim.json
 e23070156c4962a60d6ff03fb6d34058826752c1 assets\riftup\models\item\cloth_helmet_redstone_trim.json
+8a1c43920a5e5ee578f1273bf9190df1c751ffe5 assets\riftup\models\item\steel_helmet_quartz_trim.json
 9ebe8da4bcf2cec77073b512554ccda2a2416964 assets\riftup\models\item\steel_boots_netherite_trim.json
 62644547ec0f1806b02815603801c87c366cb420 assets\riftup\models\item\steel_boots_lapis_trim.json
-3294f9619e0d3050059e0468010590b12a735d1f assets\riftup\models\item\steel_leggings_quartz_trim.json
-cbffde2bc9360f14d907f2da3e4301fdfbd52e3e assets\riftup\models\item\cloth_chestplate_iron_trim.json
 9a29c1cc00d625c1713f6ac7e919fb4ea5748593 assets\riftup\models\item\cloth_leggings_iron_trim.json
+cbffde2bc9360f14d907f2da3e4301fdfbd52e3e assets\riftup\models\item\cloth_chestplate_iron_trim.json
+3294f9619e0d3050059e0468010590b12a735d1f assets\riftup\models\item\steel_leggings_quartz_trim.json
 dadad290f60b496c5a6c75b2861bf0607d779091 assets\riftup\models\item\steel_helmet_iron_trim.json
 ffcd8848222fd26dc89d9bc659ca00361c9192fe assets\riftup\models\item\steel_boots_amethyst_trim.json
 7ee777a6596dfa0b635ef7782fde8db02fe7bed1 assets\riftup\models\item\steel_chestplate_amethyst_trim.json

@@ -16,7 +16,7 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
     public static final Block STEEL_BLOCK = createWithItem("steel_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)), ItemGroups.BUILDING_BLOCKS);
-    public static final Block NETHER_DIAMOND_ORE = createWithItem("nether_diamond_ore", new Block(AbstractBlock.Settings.copy(Blocks.GILDED_BLACKSTONE).sounds(BlockSoundGroup.NETHER_GOLD_ORE)), ItemGroups.NATURAL);
+    public static final Block NETHER_DIAMOND_ORE = createWithItem("nether_diamond_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE).sounds(BlockSoundGroup.NETHER_GOLD_ORE)), ItemGroups.NATURAL);
     public static <T extends Block> T createWithItem(String name, T block, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.BLOCK, Riftup.id(name), block);
         Registry.register(Registries.ITEM, Riftup.id(name), new BlockItem(block, new Item.Settings()));

@@ -33,7 +33,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.HELMET, 3);
         map.put(ArmorItem.Type.BODY, 7);
     }), 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-            () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT), List.of(new ArmorMaterial.Layer(Riftup.id("steel"), "", false), new ArmorMaterial.Layer(Riftup.id("steel"), "_overlay", false)));
     private static RegistryEntry<ArmorMaterial> create(String name, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(Riftup.id(name)));
         return create(name, defense, enchantability, equipSound, toughness, knockbackResistance, repairIngredient, list);

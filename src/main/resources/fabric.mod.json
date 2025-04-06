@@ -3,7 +3,7 @@
 	"id": "riftup",
 	"version": "${version}",
 	"name": "Riftup",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A small progression mod",
 	"authors": [
 		"Farpo"
 	],

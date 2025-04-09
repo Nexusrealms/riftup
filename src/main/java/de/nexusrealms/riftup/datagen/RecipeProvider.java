@@ -40,6 +40,46 @@ public class RecipeProvider extends FabricRecipeProvider {
         generateArmorRecipes(recipeExporter);
         CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(Items.IRON_INGOT), RecipeCategory.MISC, ModItems.STEEL_INGOT, 1, 120)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.COKE), FabricRecipeProvider.conditionsFromTag(ModItemTags.COKE)).offerTo(recipeExporter, Riftup.id("steel_ingot_from_blasting"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_SWORD, 1)
+                .pattern("#")
+                .pattern("#")
+                .pattern(".")
+                .input('#', ModItems.STEEL_INGOT)
+                .input('.', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STEEL_PICKAXE, 1)
+                .pattern("###")
+                .pattern(" . ")
+                .pattern(" . ")
+                .input('#', ModItems.STEEL_INGOT)
+                .input('.', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STEEL_AXE, 1)
+                .pattern("##")
+                .pattern("#.")
+                .pattern(" .")
+                .input('#', ModItems.STEEL_INGOT)
+                .input('.', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STEEL_SHOVEL, 1)
+                .pattern("#")
+                .pattern(".")
+                .pattern(".")
+                .input('#', ModItems.STEEL_INGOT)
+                .input('.', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STEEL_HOE, 1)
+                .pattern("##")
+                .pattern(" .")
+                .pattern(" .")
+                .input('#', ModItems.STEEL_INGOT)
+                .input('.', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(recipeExporter);
     }
     private void generateArmorRecipes(RecipeExporter recipeExporter){
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_HELMET, 1)

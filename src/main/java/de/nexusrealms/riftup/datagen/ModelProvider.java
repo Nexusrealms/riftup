@@ -36,5 +36,11 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.STEEL_CHESTPLATE);
         itemModelGenerator.registerArmor(ModItems.STEEL_LEGGINGS);
         itemModelGenerator.registerArmor(ModItems.STEEL_BOOTS);
+        itemModelGenerator.register(ModItems.STEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
+
     }
 }

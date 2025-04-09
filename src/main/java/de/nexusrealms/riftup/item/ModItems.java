@@ -23,6 +23,12 @@ public class ModItems {
     public static final ArmorItem STEEL_LEGGINGS = create("steel_leggings", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(4))), ItemGroups.COMBAT);
     public static final ArmorItem STEEL_BOOTS = create("steel_boots", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(4))), ItemGroups.COMBAT);
 
+    public static final SwordItem STEEL_SWORD = create("steel_sword", new SwordItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+    public static final PickaxeItem STEEL_PICKAXE = create("steel_pickaxe", new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+    public static final AxeItem STEEL_AXE = create("steel_axe", new AxeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+    public static final ShovelItem STEEL_SHOVEL = create("steel_shovel", new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+    public static final HoeItem STEEL_HOE = create("steel_hoe", new HoeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+
     public static <T extends Item> T create(String name, T item, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.ITEM, Riftup.id(name), item);
         ItemGroupEvents.modifyEntriesEvent(itemGroup).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(item));

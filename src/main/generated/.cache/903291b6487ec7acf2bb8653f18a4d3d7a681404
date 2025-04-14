@@ -1,4 +1,9 @@
-// 1.21.1	2025-04-02T16:45:03.3781285	Riftup/Tags for minecraft:item
+// 1.21.1	2025-04-09T16:29:04.9111434	Riftup/Tags for minecraft:item
 05b8e15a765fb88dfe2b3ec40d80b76ded4058f7 data\riftup\tags\item\need_coke_to_smelt.json
+3ca42e0ed95a5745d4eb8a665475251bd4859fc5 data\minecraft\tags\item\swords.json
+9828ea9d88b8355238505f2713b1359f5d6c3235 data\minecraft\tags\item\pickaxes.json
+fae6c1a53ad6611f571236b371eb98b7ead730ad data\minecraft\tags\item\hoes.json
 c94cc432095f6761012c82e29fba249deef6c893 data\minecraft\tags\item\dyeable.json
+982572b29e8e4b483153fc0de7795018ae4e7182 data\minecraft\tags\item\shovels.json
+ec0edcd526801fb8a2ef9018a4a2781f844ece3c data\minecraft\tags\item\axes.json
 0c5cdacb10403ff06c6682b3a024e2bc525bd966 data\riftup\tags\item\coke.json

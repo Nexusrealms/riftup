@@ -33,15 +33,19 @@ public class LangProvider extends FabricLanguageProvider {
     }
     private void generateItemTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
         translationBuilder.add(ModItems.STEEL_INGOT, "Steel Ingot");
-        translationBuilder.add(ModItems.STEEL_HELMET, "Steel helmet");
-        translationBuilder.add(ModItems.STEEL_CHESTPLATE, "Steel chestplate");
-        translationBuilder.add(ModItems.STEEL_LEGGINGS, "Steel leggings");
-        translationBuilder.add(ModItems.STEEL_BOOTS, "Steel boots");
-        translationBuilder.add(ModItems.CLOTH_HELMET, "Cloth cap");
-        translationBuilder.add(ModItems.CLOTH_CHESTPLATE, "Cloth tunic");
-        translationBuilder.add(ModItems.CLOTH_LEGGINGS, "Cloth pants");
-        translationBuilder.add(ModItems.CLOTH_BOOTS, "Cloth shoes");
-
+        translationBuilder.add(ModItems.STEEL_HELMET, "Steel Helmet");
+        translationBuilder.add(ModItems.STEEL_CHESTPLATE, "Steel Chestplate");
+        translationBuilder.add(ModItems.STEEL_LEGGINGS, "Steel Leggings");
+        translationBuilder.add(ModItems.STEEL_BOOTS, "Steel Boots");
+        translationBuilder.add(ModItems.CLOTH_HELMET, "Cloth Cap");
+        translationBuilder.add(ModItems.CLOTH_CHESTPLATE, "Cloth Tunic");
+        translationBuilder.add(ModItems.CLOTH_LEGGINGS, "Cloth Pants");
+        translationBuilder.add(ModItems.CLOTH_BOOTS, "Cloth Shoes");
+        translationBuilder.add(ModItems.STEEL_SWORD, "Steel Sword");
+        translationBuilder.add(ModItems.STEEL_PICKAXE, "Steel Pickaxe");
+        translationBuilder.add(ModItems.STEEL_AXE, "Steel Axe");
+        translationBuilder.add(ModItems.STEEL_SHOVEL, "Steel Shovel");
+        translationBuilder.add(ModItems.STEEL_HOE, "Steel Hoe");
         translateTag(translationBuilder, ModItemTags.COKE, "Coke");
         translateTag(translationBuilder, ModItemTags.NEED_COKE_TO_SMELT, "Need coke to smelt");
     }

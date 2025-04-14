@@ -27,5 +27,15 @@ public class ItemTagProvider extends FabricTagProvider<Item> {
                 .add(ModItems.STEEL_INGOT);
         getOrCreateTagBuilder(ModItemTags.COKE)
                 .add(ModItems.COKE);
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.STEEL_SWORD);
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.STEEL_PICKAXE);
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.STEEL_AXE);
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.STEEL_SHOVEL);
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.STEEL_HOE);
     }
 }

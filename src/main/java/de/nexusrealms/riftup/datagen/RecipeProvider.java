@@ -38,6 +38,8 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.STEEL_INGOT))
                 .offerTo(recipeExporter);
         generateArmorRecipes(recipeExporter);
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(Items.COAL), RecipeCategory.MISC, ModItems.COKE, 1, 120)
+                .criterion(FabricRecipeProvider.hasItem(Items.COAL), FabricRecipeProvider.conditionsFromItem(Items.COAL)).offerTo(recipeExporter, Riftup.id("coke_from_smelting"));
         CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(Items.IRON_INGOT), RecipeCategory.MISC, ModItems.STEEL_INGOT, 1, 120)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.COKE), FabricRecipeProvider.conditionsFromTag(ModItemTags.COKE)).offerTo(recipeExporter, Riftup.id("steel_ingot_from_blasting"));
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_SWORD, 1)

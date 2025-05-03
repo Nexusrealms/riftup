@@ -1,5 +1,6 @@
-// 1.21.1	2025-04-09T16:29:04.9061732	Riftup/Recipes
+// 1.21.1	2025-05-03T17:28:43.2623682	Riftup/Recipes
 336e061d11f07c535ee050230bde08d7a8d7f51c data\riftup\advancement\recipes\combat\cloth_helmet.json
+ab650a37589887c4d183b70c1a55ec16d1218fc4 data\riftup\advancement\recipes\misc\coke_from_smelting.json
 a1e629b006b37df89cbd409cb81122791368c526 data\riftup\recipe\cloth_chestplate.json
 f1d89592dca512ecdec9e05faba4adde20f5438d data\riftup\advancement\recipes\combat\steel_helmet.json
 3f44e4422932fcb0f9582b9498aae28f220f4c44 data\riftup\recipe\steel_leggings.json
@@ -7,8 +8,8 @@ f1d89592dca512ecdec9e05faba4adde20f5438d data\riftup\advancement\recipes\combat\
 4c385c38349be89b2c1331cf30d0b7694bdae1a3 data\riftup\recipe\steel_ingot.json
 c16c3276b9da57ab174ac671516ffbec47f9f8e3 data\riftup\recipe\steel_axe.json
 b193ee410eb2b98c4e6e2c0eb1f3fa76d14c8824 data\riftup\recipe\steel_hoe.json
-6c20c756e9977f32319149ecf2f1672db722b50e data\riftup\recipe\steel_ingot_from_blasting.json
 04936d155e4f917a6556f012e228a76db6a69d60 data\riftup\recipe\cloth_leggings.json
+6c20c756e9977f32319149ecf2f1672db722b50e data\riftup\recipe\steel_ingot_from_blasting.json
 7afe9517a816815eff185dac33381ce1d7d5e61a data\riftup\advancement\recipes\tools\steel_shovel.json
 6ebfb1b625446016da860433a5d1a981410093a8 data\riftup\recipe\steel_sword.json
 272ec8edc35bba6fbf514f07dfe4c85b390054bf data\riftup\recipe\steel_helmet.json
@@ -23,6 +24,7 @@ e1aec60285c3fff28954663881be3a0b1ccc01c6 data\riftup\recipe\steel_chestplate.jso
 3040047ad23f28c61f67bcddc0cff81d5ba9f8bf data\riftup\advancement\recipes\tools\steel_pickaxe.json
 0cbec9673afc5ae8413546a7806c05efb6b10fa8 data\riftup\advancement\recipes\misc\steel_ingot.json
 b4aeaaf93b5bf2f66f1ff157ac3b4adeef0d8f56 data\riftup\recipe\cloth_boots.json
+b1d0d5ad584cb33ca5cfb8c7e5b7cefe070882ed data\riftup\recipe\coke_from_smelting.json
 51d609384255190832fc8b1c5fc0bac2c3d726a0 data\riftup\advancement\recipes\combat\steel_sword.json
 a072d2ebe0f6bb9aaee9748a2abadf221923f8bc data\riftup\advancement\recipes\combat\cloth_boots.json
 a03f83ecd49b0b33b2d19e8537671f43fd15e699 data\riftup\recipe\steel_boots.json

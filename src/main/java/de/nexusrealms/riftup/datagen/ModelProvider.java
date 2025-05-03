@@ -28,6 +28,8 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COKE, Models.GENERATED);
+
         itemModelGenerator.registerArmor(ModItems.CLOTH_HELMET);
         itemModelGenerator.registerArmor(ModItems.CLOTH_CHESTPLATE);
         itemModelGenerator.registerArmor(ModItems.CLOTH_LEGGINGS);

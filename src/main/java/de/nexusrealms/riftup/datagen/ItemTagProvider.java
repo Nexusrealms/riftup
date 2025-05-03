@@ -38,4 +38,7 @@ public class ItemTagProvider extends FabricTagProvider<Item> {
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.STEEL_HOE);
     }
+
+
+
 }

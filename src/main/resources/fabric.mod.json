@@ -3,13 +3,14 @@
 	"id": "riftup",
 	"version": "${version}",
 	"name": "Riftup",
-	"description": "A small progression mod",
+	"description": "A small progression mod, designed for the needs of Rift Realms Season 3",
 	"authors": [
-		"Farpo"
+		"Farpo",
+		"DinoGamer2k9"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://nexusrealms.de/",
+		"sources": "https://github.com/Nexusrealms/riftup"
 	},
 	"license": "MIT",
 	"icon": "assets/riftup/icon.png",

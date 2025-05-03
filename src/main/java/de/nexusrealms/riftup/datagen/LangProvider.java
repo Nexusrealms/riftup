@@ -46,6 +46,8 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.STEEL_AXE, "Steel Axe");
         translationBuilder.add(ModItems.STEEL_SHOVEL, "Steel Shovel");
         translationBuilder.add(ModItems.STEEL_HOE, "Steel Hoe");
+        translationBuilder.add(ModItems.COKE, "Coke");
+
         translateTag(translationBuilder, ModItemTags.COKE, "Coke");
         translateTag(translationBuilder, ModItemTags.NEED_COKE_TO_SMELT, "Need coke to smelt");
     }

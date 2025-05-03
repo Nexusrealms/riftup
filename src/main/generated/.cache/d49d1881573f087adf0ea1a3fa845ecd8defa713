@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-09T16:29:04.907143	Riftup/Model Definitions
+// 1.21.1	2025-05-03T17:28:43.2643649	Riftup/Model Definitions
 0ffaffc31c64316d1768fcb43a8135627bbef0e4 assets\riftup\models\item\cloth_boots_netherite_trim.json
 d8bdfb983e60a9bb8bb0f4e81ad6018f9f703b10 assets\riftup\models\item\cloth_helmet_iron_trim.json
 01fbd1c2936acf71b2ea42798b72093695f361ca assets\riftup\blockstates\steel_block.json
@@ -91,6 +91,7 @@ eb81252ed53a2a8b5656ec59b917c7710d304e4f assets\riftup\models\item\cloth_legging
 58f92acd00c8615ec61f239d72711910201a0339 assets\riftup\models\item\cloth_leggings.json
 f48afe81ee25389ccb5257718a07b9d2b6881792 assets\riftup\models\item\steel_chestplate_redstone_trim.json
 edd536b658b20184dfb1da7ef06eb26fd2ecc22d assets\riftup\models\item\cloth_helmet_amethyst_trim.json
+f19a4acabb8b1503da8dfa2971533a33b2232342 assets\riftup\models\item\coke.json
 8a1c43920a5e5ee578f1273bf9190df1c751ffe5 assets\riftup\models\item\steel_helmet_quartz_trim.json
 62644547ec0f1806b02815603801c87c366cb420 assets\riftup\models\item\steel_boots_lapis_trim.json
 cbffde2bc9360f14d907f2da3e4301fdfbd52e3e assets\riftup\models\item\cloth_chestplate_iron_trim.json

@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "get_coke": {
+      "conditions": {
+        "items": [
+          {
+            "items": "riftup:coke"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.riftup.coke.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "riftup:coke"
+    },
+    "title": {
+      "translate": "advancement.riftup.coke.name"
+    }
+  },
+  "requirements": [
+    [
+      "get_coke"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

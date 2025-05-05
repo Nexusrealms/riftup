@@ -13,5 +13,6 @@ public class RiftupDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(LangProvider::new);
 		pack.addProvider(RecipeProvider::new);
 		pack.addProvider(ModelProvider::new);
+		pack.addProvider(AdvancementProvider::new);
 	}
 }

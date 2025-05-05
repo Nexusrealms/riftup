@@ -55,5 +55,8 @@ public class LangProvider extends FabricLanguageProvider {
         translationBuilder.add(tagKey.getTranslationKey(), name);
     }
     private void generateMessageTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder){
+        translationBuilder.add("advancement.riftup.coke.name", "Coal but hotter");
+        translationBuilder.add("advancement.riftup.coke.desc", "Go make some fancier iron");
+
     }
 }

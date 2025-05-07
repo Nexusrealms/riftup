@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Unique;
 @Mixin(SingleStackRecipeInput.class)
 public abstract class SingleStackRecipeInputMixin implements FuelHolder {
     @Unique
-    private ItemStack secondStack;
+    private ItemStack secondStack = ItemStack.EMPTY;
     @Override
     public ItemStack riftup$getFuel() {
         return secondStack;

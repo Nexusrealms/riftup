@@ -23,11 +23,11 @@ public class ModItems {
     public static final ArmorItem STEEL_LEGGINGS = create("steel_leggings", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(4))), ItemGroups.COMBAT);
     public static final ArmorItem STEEL_BOOTS = create("steel_boots", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(4))), ItemGroups.COMBAT);
 
-    public static final SwordItem STEEL_SWORD = create("steel_sword", new SwordItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
-    public static final PickaxeItem STEEL_PICKAXE = create("steel_pickaxe", new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
-    public static final AxeItem STEEL_AXE = create("steel_axe", new AxeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
-    public static final ShovelItem STEEL_SHOVEL = create("steel_shovel", new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
-    public static final HoeItem STEEL_HOE = create("steel_hoe", new HoeItem(ModToolMaterials.STEEL, new Item.Settings()), ItemGroups.COMBAT);
+    public static final SwordItem STEEL_SWORD = create("steel_sword", new SwordItem(ModToolMaterials.STEEL, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL, 3, -2.4F))), ItemGroups.COMBAT);
+    public static final PickaxeItem STEEL_PICKAXE = create("steel_pickaxe", new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.STEEL, 1.5F, -3.0F))), ItemGroups.COMBAT);
+    public static final AxeItem STEEL_AXE = create("steel_axe", new AxeItem(ModToolMaterials.STEEL, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 1.0F, -2.8F))), ItemGroups.COMBAT);
+    public static final ShovelItem STEEL_SHOVEL = create("steel_shovel", new ShovelItem(ModToolMaterials.STEEL, new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 4.0F, -3.1F))), ItemGroups.COMBAT);
+    public static final HoeItem STEEL_HOE = create("steel_hoe", new HoeItem(ModToolMaterials.STEEL, new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ToolMaterials.IRON, -2.0F, -1.0F))), ItemGroups.COMBAT);
 
     public static <T extends Item> T create(String name, T item, RegistryKey<ItemGroup> itemGroup) {
         Registry.register(Registries.ITEM, Riftup.id(name), item);
